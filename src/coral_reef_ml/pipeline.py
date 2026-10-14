@@ -340,8 +340,15 @@ def run_pipeline(root: Path) -> None:
         "class_labels": [int(c) for c in sorted(y.unique())],
     }
     (results_dir / "final_test_metrics.json").write_text(json.dumps(final_metrics, indent=2), encoding="utf-8")
-    report_dict = classification_report(y_test, y_pred, labels=sorted(y.unique()), output_dict=True, zero_division=0)
-    pd.DataFrame(report_dict).transpose().to_csv(results_dir / "classification_report.csv", float_format="%.6f")
+    # Keep the class label as an explicit first column. The report and slide
+    # generators consume a table (not sklearn's nested output_dict structure).
+    report_output = classification_report(
+        y_test, y_pred, labels=sorted(y.unique()), output_dict=True, zero_division=0
+    )
+    report_dict = pd.DataFrame(report_output).transpose()
+    report_dict.index.name = "class"
+    report_dict = report_dict.reset_index()
+    report_dict.to_csv(results_dir / "classification_report.csv", index=False, float_format="%.6f")
     cm = confusion_matrix(y_test, y_pred, labels=sorted(y.unique()))
     cm_df = pd.DataFrame(cm, index=[f"true_{c}" for c in sorted(y.unique())],
                          columns=[f"pred_{c}" for c in sorted(y.unique())])
