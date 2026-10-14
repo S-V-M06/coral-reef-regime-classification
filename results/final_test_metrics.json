@@ -1,0 +1,43 @@
+{
+  "selected_model": "Random Forest",
+  "feature_set": "base_20",
+  "feature_count": 20,
+  "features_used": [
+    "Effluent",
+    "Sedimentation",
+    "New_Development",
+    "Habitat_Modification",
+    "Invasive_Algae",
+    "Fishing_Comm_Total",
+    "Fishing_NonComm_Boat_Total",
+    "Fishing_NonComm_Shore_Line",
+    "Fishing_NonComm_Shore_Net",
+    "Fishing_NonComm_Shore_Spear",
+    "SST_CLIM_M",
+    "SST_STD",
+    "CHL_CLIM_M",
+    "CHL_ANOM_F",
+    "PAR_CLIM_M",
+    "PAR_STD",
+    "WAV_CLIM_M",
+    "WAV_ANOM_F",
+    "Complexity",
+    "Depth"
+  ],
+  "selection_basis": "Highest mean 5-fold macro-F1 on training split; test set not used for selection",
+  "test_accuracy": 0.7016129032258065,
+  "test_balanced_accuracy": 0.7019100743745773,
+  "test_macro_f1": 0.7022629379620701,
+  "test_micro_f1": 0.7016129032258065,
+  "test_weighted_f1": 0.7012905299613236,
+  "test_macro_precision": 0.7123560298102981,
+  "test_macro_recall": 0.7019100743745773,
+  "train_rows": 496,
+  "test_rows": 124,
+  "class_labels": [
+    1,
+    2,
+    3,
+    5
+  ]
+}

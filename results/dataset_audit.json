@@ -1,0 +1,60 @@
+{
+  "dataset_source": "https://raw.githubusercontent.com/JBjouffray/Hawaii_RegimesPredictors/master/Data/Hawaii_RegimesPredictors.txt",
+  "local_data_path": "data\\Hawaii_RegimesPredictors.txt",
+  "source_data_sha256": "cc3e7d02c9643ced4d2b68109af1294b312260a0b376059b756d62cb7dfe4aa4",
+  "rows": 620,
+  "predictor_count": 20,
+  "predictors": [
+    "Effluent",
+    "Sedimentation",
+    "New_Development",
+    "Habitat_Modification",
+    "Invasive_Algae",
+    "Fishing_Comm_Total",
+    "Fishing_NonComm_Boat_Total",
+    "Fishing_NonComm_Shore_Line",
+    "Fishing_NonComm_Shore_Net",
+    "Fishing_NonComm_Shore_Spear",
+    "SST_CLIM_M",
+    "SST_STD",
+    "CHL_CLIM_M",
+    "CHL_ANOM_F",
+    "PAR_CLIM_M",
+    "PAR_STD",
+    "WAV_CLIM_M",
+    "WAV_ANOM_F",
+    "Complexity",
+    "Depth"
+  ],
+  "engineered_interactions": [
+    "WavePower_x_Complexity",
+    "WavePower_x_Depth",
+    "Complexity_x_Depth",
+    "InvasiveAlgae_x_PAR",
+    "WaveAnomaly_x_ChlorophyllAnomaly"
+  ],
+  "target": "Regime",
+  "classes": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "missing_values_by_predictor": {
+    "Complexity": 113,
+    "Depth": 12
+  },
+  "exact_duplicate_rows_in_source": 0,
+  "class_counts": {
+    "1": 171,
+    "2": 172,
+    "3": 143,
+    "5": 134
+  },
+  "train_rows": 496,
+  "test_rows": 124,
+  "split": "80/20 stratified train/test; random_state=42",
+  "selection_metric": "mean 5-fold macro-F1 on training split",
+  "cv": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+  "created_utc": "2026-10-13T04:56:49.426419+00:00"
+}

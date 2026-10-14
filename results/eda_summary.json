@@ -1,0 +1,14 @@
+{
+  "exact_duplicate_rows_not_removed": 0,
+  "predictors_with_missing_values": {
+    "Complexity": 113,
+    "Depth": 12
+  },
+  "class_counts": {
+    "1": 171,
+    "2": 172,
+    "3": 143,
+    "5": 134
+  },
+  "interpretation_note": "No rows were removed automatically; inspect duplicates and missingness before interpreting the outputs."
+}

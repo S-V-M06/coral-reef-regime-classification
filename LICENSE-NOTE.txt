@@ -1,0 +1,1 @@
+This code bundle is prepared for the user's course assignment. The underlying Hawaiian reef dataset remains attributed to its original research repository and paper; consult the source repository and publication terms before redistributing the source data.

@@ -1,0 +1,7 @@
+model,feature_set,feature_count,cv_macro_f1_mean,cv_macro_f1_std,cv_micro_f1_mean,cv_weighted_f1_mean,cv_accuracy_mean,cv_balanced_accuracy_mean
+Random Forest,base_20,20,0.691660,0.049898,0.697717,0.696641,0.697717,0.692120
+Random Forest + interactions,base_20_plus_5_interactions,25,0.687319,0.063717,0.693697,0.692975,0.693697,0.686367
+Gradient Boosting,base_20,20,0.658468,0.042097,0.667394,0.664704,0.667394,0.659791
+RBF SVM,base_20,20,0.645134,0.038291,0.649273,0.649726,0.649273,0.647411
+Logistic Regression,base_20,20,0.577261,0.058502,0.584727,0.585783,0.584727,0.577366
+Most-Frequent Baseline,base_20,20,0.106974,0.000377,0.272182,0.116467,0.272182,0.250000
